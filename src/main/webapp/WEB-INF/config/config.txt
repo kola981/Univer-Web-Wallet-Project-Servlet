@@ -1,0 +1,8 @@
+Rmi:
+
+ADDRESS = 127.0.0.1
+PORT = 1109
+CLIENT_SERVICE = service
+ADMIN_SERVICE = administration
+REGISTRATION_SERVICE = registration
+AUTH_SERVICE = authentication

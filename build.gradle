@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'com.bmuschko.cargo' version '2.4'
+}
+
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+webAppDirName = 'src/main/webapp'
+
+repositories {
+   mavenCentral()
+   maven() {
+        url "http://mvnrepository.com/artifact/"
+   }
+}
+
+dependencies {
+    implementation 'jstl:jstl:1.2'
+    implementation 'org.apache.logging.log4j:log4j-api:2.11.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.11.1'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    cargo 'org.codehaus.cargo:cargo-core-uberjar:1.4.5',  'org.codehaus.cargo:cargo-ant:1.4.5'
+}
+
+cargo {
+    containerId = 'tomcat8x'
+    port = 8080
+
+
+    deployable {
+        context = 'payments'
+    }
+
+    remote {
+        hostname = 'localhost'
+        username =  'Tom123'
+        password =  'admin123'
+    }
+}
+ 
+test {
+    testLogging {
+        events = ['standard_out', 'standard_error']
+    }
+}
+
+
+
+task cleanBuildDeploy {
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'cargoRedeployRemote'
+    tasks.findByName('build').mustRunAfter 'clean'
+    tasks.findByName('cargoRedeployRemote').mustRunAfter 'build'
+}
+
+

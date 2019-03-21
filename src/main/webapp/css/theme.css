@@ -1,0 +1,76 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.welcome {
+    margin-top: 50px;
+}
+
+.card-img-top {
+    height: 30rem;
+    width: auto;
+}
+
+.border-danger {
+    border-color: #524f8c!important;
+}
+
+.navbar {
+    background-color: #524f8c;
+}
+
+#brand {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,.75);
+}
+
+.btn.btn-danger {
+    background-color: #524f8c!important;
+    border-color: rgba(82, 79, 140, 0.25);
+}
+
+.email {
+    margin-left: -5px;
+    margin-right: -5px; 
+}
+
+.table td, .table th {
+    padding: 0.35rem;
+    vertical-align: middle;
+}
+
+.main.content {
+    position: fixed;
+    margin-top: 60px;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
+}
+
+.main-viewport {
+    height: 100vh;
+}
+
+.sidebar {
+    border-color: rgba(82, 79, 140, 0.25);
+}
+
+.sb-elements {
+	margin-top:15px;
+}
+
+.sb-elements li a {
+      color: #3a3862;
+}
+
+.sb-elements li a:hover {
+      color: rgba(82, 79, 140, 0.5);
+}
+
+
+.acc-data {
+	border-color: rgba(82, 79, 140, 0.25);
+	margin-top:15px;
+	padding-bottom:10px;
+}

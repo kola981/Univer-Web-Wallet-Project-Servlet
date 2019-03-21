@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.container.login {
+    vertical-align: middle;
+    height:45rem;
+    width: auto;
+}
+
+.welcome {
+    margin-top: 0px;
+}
+
+.jumbotron {
+	padding: 2rem 2rem;
+}

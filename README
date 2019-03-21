@@ -1,0 +1,11 @@
+Simple Web Wallet Infopulse project.
+
+Installation instructions
+
+1. Update rmi settings in src/main/webapp/WEB-INF/config/config.txt to match serviceRmi settings. Defaults are localhost:1109.
+2. Run gradlew ./build
+3. Deploy at some servlet container. I used Tomcat.
+
+Optional. If you use Tomcat, you can adjust cargo settings in gradle.build. Then you can build deploy with gradle cleanBuildDeploy.
+
+
